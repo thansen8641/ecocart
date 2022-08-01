@@ -1,0 +1,147 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F8F8F8;
+}
+
+.productListMainDiv {
+  width: 50%;
+  z-index: 9000;
+}
+
+
+
+.headerMainDiv {
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  background-color: rgb(67,232,149);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 40px;
+}
+
+.headerText {
+  color: #FFFFFF;
+  height: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding: 20px
+}
+
+.productListHeaderDetails {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  color: white;
+  height: 21%;
+  justify-content: flex-end;
+  font-family: Roboto, sans-serif;
+  width: 50%;
+}
+
+.productListRestaurantDetail {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+}
+
+.productListRestaurantName {
+  font-weight: 600;
+  margin: 0px;
+}
+
+.productListImage {
+  max-width: 100%;
+}
+
+.singleProductDiv {
+  width: 100%;
+}
+
+.productViewRestaurantNameDiv {
+  background-color: rgb(52,179,121);
+  height: 10%;
+  color: white;
+  padding: 20px;
+  z-index: 3;
+  font-size: 22px;
+  font-family: Roboto, sans-serif;
+}
+
+.locationAndContactDetailsDiv {
+  height: 100%;
+   display: flex;
+   flex-direction: column;
+   padding: 20px;
+   z-index: 3;
+   font-size: 20px;
+   font-family: Roboto, sans-serif;
+}
+
+.productDetailMainDiv {
+  width: 50%;
+  position: fixed;
+  right: -1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  animation: slide .5s ease-in;
+  z-index: 5;
+}
+
+.headerBtns {
+  height: 50px;
+}
+
+.headerBtns:hover {
+  cursor: pointer;
+}
+
+
+@media only screen and (min-width: 1100px) {
+  .productListHeaderDetails {
+    height: 35%;
+    width: 35.5%;
+  }
+  .productDetailMainDiv {
+    width: 65%;
+  }
+  .singleProductDiv {
+    width: 71%;
+  }
+  .singleProductDiv:hover {
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+ .productListRestaurantDetail {
+   padding: 5px;
+ }
+
+ .productListRestaurantName {
+  font-size: 22px;
+}
+
+.productViewRestaurantNameDiv {
+  font-size: 17px;
+}
+
+}
+
+
+@keyframes slide {
+  0% {
+    transform: translateX(-500px);
+  }
+  100% {
+    transform:
+  }
+}
