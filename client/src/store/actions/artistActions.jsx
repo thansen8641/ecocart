@@ -2,9 +2,20 @@
 import React from 'react'
 import Axios from 'axios'
 
+// export const removeArtists = (artists, valueToQueryFor) => {
+//   return (dispatch) => {
+//     var filtered = artists.filter((a) => {
+//       if (a.name.length <= valueToQueryFor.length) {
+//         return true
+//       } else {
+//         return true
+//       }
+//     })
+//     console.log('filtered', filtered)
+//   }
+// }
 
 export const getArtists = (query, artists) => {
-  console.log('query', query)
   return (dispatch) => {
     if (!query) {
       dispatch(resetArtists())

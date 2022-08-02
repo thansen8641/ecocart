@@ -40,6 +40,29 @@ body {
   padding: 5px;
 }
 
+.individualResult {
+  width: 94%;
+  background-color: white;
+  display: flex;
+  padding: 10px;
+  border: 1px solid #cdcdcd;
+}
+.individualResult:hover {
+  cursor: pointer;
+  background-color: rgb(237, 237, 237);
+}
+
+.individualResultImg {
+  width: 50px;
+  border-radius: 100%;
+  margin-right: 15px;
+}
+
+.individualResultFollowers {
+  color: #8f8f8f;
+  font-size: 15px;
+}
+
 .heroMain {
   width: 55%;
   margin: 50px auto;

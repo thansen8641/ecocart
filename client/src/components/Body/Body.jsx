@@ -6,9 +6,7 @@ const Body = (props) => {
   const {} = props;
 
   return (
-    <div>
       <HeroCard />
-    </div>
   );
 };
 

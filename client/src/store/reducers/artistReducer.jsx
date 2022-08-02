@@ -13,7 +13,6 @@ export default (state = initState, action) => {
       var toReturn = {...state}
       var artistCopy = [...toReturn.artists, action.data]
       var sortedArtists = artistCopy.sort((a, b) => (a.tracker_count > b.tracker_count) ? -1 : 1)
-      console.log('sortedArtists', sortedArtists)
       toReturn.artists = sortedArtists
       return toReturn
 

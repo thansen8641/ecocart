@@ -6,6 +6,7 @@ import Search from "@material-ui/icons/Search";
 import {
   getArtists,
   setSelectedArtist,
+  removeArtists
 } from "../../store/actions/artistActions.jsx";
 import { MdVerifiedUser } from "react-icons/md";
 
@@ -23,9 +24,21 @@ const SearchBar = (props) => {
     setQuery("");
   };
 
+  // const handleBackspace = (valueToQueryFor) => {
+  //   props.removeArtists(artists, valueToQueryFor)
+  // }
+
   return (
     <div className="headerThird">
       <TextField
+      // working on way to refilter on backspace but api is kinda strange. only returns one artist for every key stroke inputted where other apis would return a list of artists that included the query instead of only one.
+
+      //  onKeyDown={(e) => {
+      //   if (e.key === 'Backspace') {
+      //     var valueToQueryFor = e.target.value.slice(0, e.target.value.length -1)
+      //     handleBackspace(valueToQueryFor)
+      //   }
+      // }}
         className="searchBar"
         onChange={handleSearch}
         variant="outlined"
@@ -46,21 +59,12 @@ const SearchBar = (props) => {
           {artists.map((a, index) => {
             return (
               <div
+              className='individualResult'
                 onClick={() => handleSelect(a)}
                 key={index}
-                style={{
-                  width: "94%",
-                  backgroundColor: "white",
-                  display: "flex",
-                  padding: "10px",
-                }}
               >
                 <img
-                  style={{
-                    width: "50px",
-                    borderRadius: "100%",
-                    marginRight: "15px",
-                  }}
+                className='individualResultImg'
                   src={a.image_url}
                 />
                 <div style={{ display: "flex", flexDirection: "column" }}>
@@ -72,7 +76,7 @@ const SearchBar = (props) => {
                       <MdVerifiedUser style={{ fill: "#00b4b3" }} />
                     ) : null}
                   </span>
-                  <span style={{ color: "#8F8F8F", fontSize: "15px" }}>
+                  <span className='individualResultFollowers'>
                     {a.tracker_count + " Followers"}
                   </span>
                 </div>
@@ -95,6 +99,7 @@ const mapDispatchToProps = (dispatch) => ({
   getArtists: (query, artists) => dispatch(getArtists(query, artists)),
   setSelectedArtist: (selectedArtist) =>
     dispatch(setSelectedArtist(selectedArtist)),
+    // removeArtists: (artists, valueToQueryFor) => dispatch(removeArtists())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);
