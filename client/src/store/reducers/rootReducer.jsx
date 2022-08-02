@@ -1,7 +1,7 @@
 import React from 'react';
 import { combineReducers } from 'redux'
-import restaurantReducer from './restaurantReducer.jsx'
+import artistReducer from './artistReducer.jsx'
 
 export default combineReducers({
-  restaurants: restaurantReducer
+  artist: artistReducer,
 });

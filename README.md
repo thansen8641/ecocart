@@ -1,4 +1,4 @@
-Hello and thank you for considering me as a candidate for Bottle Rocket. I had a blast working on this assignment and learned a ton, including how to work with the Google Maps SDK.
+Hello and thank you for considering me as a candidate for Ecocart.
 
 To start up my application, please npm install the dependencies. Then simultaneously run npm start and npm run build to start the server and compile the code through Webpack.
 
